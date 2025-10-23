@@ -22,9 +22,6 @@ class HarringtonStrategy(Strategy):
                 return 'D'
             return 'C'
 
-        # before cooperation is established
-        round_number = len(self.my_history)
-
         # if belief gets too low just give up
         if self.belief < self.min_belief_to_cooperate:
             self.defected_forever = True
