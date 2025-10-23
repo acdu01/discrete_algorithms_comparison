@@ -20,16 +20,29 @@ def play_round(p1, p2):
     p1.record_result(move1, move2)
     p2.record_result(move2, move1)
 
-    return point1, point2
+    # return moves and scores
+    return move1, move2, point1, point2
 
-def play_game(p1, p2, rounds=200):
-    # track total points across all rounds
+
+def play_game(p1, p2, rounds):
     total1 = total2 = 0
+    p1_moves = []
+    p2_moves = []
+    
+    # save moves and scores
     for _ in range(rounds):
-        r1, r2 = play_round(p1, p2)
+        move1, move2, r1, r2 = play_round(p1, p2)
         total1 += r1
         total2 += r2
-    return total1, total2
+        p1_moves.append(move1)
+        p2_moves.append(move2)
+
+    # turn move lists into strings
+    p1_history = ''.join(p1_moves)
+    p2_history = ''.join(p2_moves)
+
+    return total1, total2, p1_history, p2_history
+
 
 if __name__ == "__main__":
     # set up two strategies to face off
@@ -37,9 +50,11 @@ if __name__ == "__main__":
     p2 = TitForTat()
 
     # run the simulation
-    score1, score2 = play_game(p1, p2, rounds=500)
+    score1, score2, history1, history2 = play_game(p1, p2, 51)
 
     # print out the results
     print(f"Tournament result:")
     print(f"player 1 ({p1.__class__.__name__}): {score1}")
     print(f"player 2 ({p2.__class__.__name__}): {score2}")
+    print(f"player 1 history: {history1}")
+    print(f"player 2 history: {history2}")
