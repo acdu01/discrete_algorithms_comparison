@@ -1,6 +1,11 @@
 from strategies.base_strategy import Strategy
 
-class DefectTitForTat(Strategy):
+class Malthrin(Strategy):
+    def __init__(self):
+        self.my_history = []
+        self.opponent_history = []
+        self.round = 0  # keeps track of round
+
     def move(self):
         if not self.opponent_history:
             return 'C'  # start with defect
