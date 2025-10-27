@@ -10,7 +10,10 @@ class NameWithheld(Strategy):
         self.random_detector = 0
  
     def move(self):       
-        fraction = self.opponent_history.count('D') / len(self.opponent_history) # fraction of opponent defections
+        if 'D' in self.opponent_history:
+            fraction = self.opponent_history.count('D') / len(self.opponent_history) # fraction of opponent defections
+        else:
+            fraction = 0
         
         if self.round // 10 and self.opponent_history:   
             if fraction >= 0.6 and self.probibility >= 0.1: 
@@ -21,7 +24,7 @@ class NameWithheld(Strategy):
                 self.random_detector = 1 # detect random opponent if between 0.6 and 0.4 defections
         
         self.round += 1
-        
+
         if self.random_detector == 1: # always defect if opponent is random
             return 'D'
         elif random.random() <= self.probibility: # cooperate based on probability
