@@ -54,6 +54,10 @@ def play_round(p1, p2):
     p1.record_result(move1, move2)
     p2.record_result(move2, move1)
 
+    if hasattr(p1, "total_rounds"):
+        p1.total_rounds = rounds
+    if hasattr(p2, "total_rounds"):
+        p2.total_rounds = rounds
 
     return r1, r2
 
@@ -100,7 +104,6 @@ def run_tournament(rounds=100, save=True):
             })
 
     # save results to csv with rounds in filename
-# save results to csv with rounds in filename
     if save:
         results_folder = Path("tournament_results")
         results_folder.mkdir(exist_ok=True)
