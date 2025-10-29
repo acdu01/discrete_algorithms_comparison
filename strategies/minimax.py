@@ -28,7 +28,7 @@ class MiniMax(Strategy):
             "D", last_opponent_move, self.rounds, float("-inf"), float("inf"), True
         )
 
-        return "C" if (start_cooperation > start_deflection) else "D"
+        return "C" if (start_cooperation >= start_deflection) else "D"
 
     def minimax(self, my_move, opp_move, rounds, alpha, beta, maximize):
 
@@ -37,15 +37,13 @@ class MiniMax(Strategy):
 
         if maximize:
             max_points = float("-inf")
-            opponent_moves = ["C", "D"]
+            my_next_move = ["C", "D"] if rounds < self.rounds else [my_move]
 
-            for opp_move in opponent_moves:
+            for next_move in my_next_move:
 
-                current_round_score = POINTS[(my_move, opp_move)][0]
-                future_round_score = self.minimax(
-                    my_move, opp_move, rounds - 1, alpha, beta, False
+                total_score = self.minimax(
+                    next_move, opp_move, rounds, alpha, beta, False
                 )
-                total_score = current_round_score + future_round_score
 
                 max_points = max(max_points, total_score)
 
@@ -65,8 +63,8 @@ class MiniMax(Strategy):
                 future_round_score = self.minimax(
                     my_move, opp_next, rounds - 1, alpha, beta, True
                 )
-                total = current_round_score + future_round_score
-                min_points = min(min_points, total)
+                total_score = current_round_score + future_round_score
+                min_points = min(min_points, total_score)
 
                 beta = min(beta, min_points)
                 if beta <= alpha:
