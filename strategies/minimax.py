@@ -37,12 +37,12 @@ class MiniMax(Strategy):
 
         if maximize:
             max_points = float("-inf")
-            my_next_move = ["C", "D"] if rounds < self.rounds else [my_move]
+            my_next_move = ["C", "D"]
 
             for next_move in my_next_move:
 
                 total_score = self.minimax(
-                    next_move, opp_move, rounds, alpha, beta, False
+                    next_move, opp_move, rounds - 1, alpha, beta, False
                 )
 
                 max_points = max(max_points, total_score)
