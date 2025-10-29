@@ -10,7 +10,7 @@ POINTS = {
 
 class MiniMax(Strategy):
 
-    def __init__(self, rounds=2):
+    def __init__(self, rounds=5):
         super().__init__()
         self.rounds = rounds
 
