@@ -43,6 +43,8 @@ def play_round(p1, p2):
     move1 = p1.move()
     move2 = p2.move()
 
+    if move1 not in ("C", "D") or move2 not in ("C", "D"):
+        raise ValueError(f"Invalid move: {p1.__class__.__name__} -> {move1}, {p2.__class__.__name__} -> {move2}")
 
     # look up their scores from the table
     r1, r2 = POINTS[(move1, move2)]
@@ -72,11 +74,9 @@ def run_tournament(rounds=100, save=True):
     results = {s.__name__: 0 for s in strategies}
     match_data = []
 
-
     print(f"loaded {len(strategies)} strategies:")
     for s in strategies:
         print("  -", s.__name__)
-
 
     # everyone plays everyone else once
     for i, S1 in enumerate(strategies):
@@ -87,13 +87,10 @@ def run_tournament(rounds=100, save=True):
             p2 = S2()
             score1, score2 = play_game(p1, p2, rounds)
 
-
             results[S1.__name__] += score1
             results[S2.__name__] += score2
 
-
             print(f"{S1.__name__} vs {S2.__name__}: {score1}-{score2}")
-
 
             match_data.append({
                 "Player 1": S1.__name__,
@@ -102,37 +99,40 @@ def run_tournament(rounds=100, save=True):
                 "Score 2": score2
             })
 
-
-    # save results to csv with rounds in filename (avoid overwriting diff # of rounds)
+    # save results to csv with rounds in filename
+# save results to csv with rounds in filename
     if save:
-        filename = f"tournament_results_{rounds}rounds.csv"
+        results_folder = Path("tournament_results")
+        results_folder.mkdir(exist_ok=True)
 
+        filename = results_folder / f"tournament_results_{rounds}rounds.csv"
 
         with open(filename, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=["Player 1", "Player 2", "Score 1", "Score 2"])
             writer.writeheader()
             writer.writerows(match_data)
 
-
-            # put rankings at the bottom of the file
-            writer.writerow({})
-            writer.writerow({"Player 1": "final rankings (total score)"})
+            writer.writerow({})  # blank line before final scores
             for name, total in sorted(results.items(), key=lambda x: x[1], reverse=True):
-                writer.writerow({"Player 1": name, "Score 1": total})
+                f.write(f"final score,{name},{total},\n")
 
-
-    # print summary in the console too
-    print("\nfinal rankings:")
+    # print summary
+    print("final rankings:")
     for name, total in sorted(results.items(), key=lambda x: x[1], reverse=True):
         print(f"{name:25s} {total}")
 
 
 
-
 if __name__ == "__main__":
-    # run the tournament w/ rounds
-    run_tournament(rounds=50)
+    # round counts to run
+    round_counts = [
+        50, 55, 150, 155, 200, 205, 250, 255, 305, 355, 405, 
+        455, 505, 555, 605, 655, 705, 755, 805, 855, 905, 955, 
+        1005, 1055, 1105, 1155, 1205, 1255, 1305, 1355, 1405,
+        ]
 
+    for rounds in round_counts:
+        run_tournament(rounds=rounds, save=True)
 
 
 

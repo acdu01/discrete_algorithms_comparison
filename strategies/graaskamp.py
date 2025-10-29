@@ -19,6 +19,9 @@ class GraaskampStrategy(Strategy):
             return 'D'
         if len(self.my_history) <= 55:
             return self.opponent_history[-1]
+        else:
+            return self.check_strategy(self.opponent_history)
+
 
     def check_strategy(self, opponent_history):
         """check opponent strategy, if it seems to be a nice algorithm
