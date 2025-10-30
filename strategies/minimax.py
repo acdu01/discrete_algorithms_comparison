@@ -9,14 +9,11 @@ POINTS = {
 
 
 class MiniMax(Strategy):
-    """Uses the minimax algorithm with alpha-beta pruning to decide between cooperation and defection"""
-
     def __init__(self, rounds=5):
         super().__init__()
         self.rounds = rounds
 
     def move(self):
-
         if self.opponent_history:
             last_opponent_move = self.opponent_history[-1]
         else:
@@ -32,26 +29,21 @@ class MiniMax(Strategy):
         return "C" if (start_cooperation >= start_deflection) else "D"
 
     def minimax(self, my_move, opp_move, rounds, alpha, beta, maximize):
-
         if rounds == 0:
             return 0
 
         if maximize:
             max_points = float("-inf")
-            my_next_move = ["C", "D"]
+            my_next_move = ["C", "D"] if rounds < self.rounds else [my_move]
 
             for next_move in my_next_move:
-
                 total_score = self.minimax(
                     next_move, opp_move, rounds - 1, alpha, beta, False
                 )
-
                 max_points = max(max_points, total_score)
-
                 alpha = max(alpha, max_points)
                 if alpha >= beta:
                     break
-
             return max_points
 
         else:
@@ -59,14 +51,12 @@ class MiniMax(Strategy):
             opp_next_move = ["C", "D"]
 
             for opp_next in opp_next_move:
-
                 current_round_score = POINTS[(my_move, opp_next)][0]
                 future_round_score = self.minimax(
                     my_move, opp_next, rounds - 1, alpha, beta, True
                 )
                 total_score = current_round_score + future_round_score
                 min_points = min(min_points, total_score)
-
                 beta = min(beta, min_points)
                 if beta <= alpha:
                     break

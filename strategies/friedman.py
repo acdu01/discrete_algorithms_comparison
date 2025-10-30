@@ -1,6 +1,6 @@
 from strategies.base_strategy import Strategy
 
-class DefectTitForTat(Strategy):
+class Friedman(Strategy):
     def move(self):
         if not self.opponent_history:
             return 'C'  # start with cooperation
