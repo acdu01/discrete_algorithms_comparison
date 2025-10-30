@@ -9,6 +9,16 @@ POINTS = {
 }
 
 class TidemanAndChieruzzi(Strategy):
+    """
+    A reactive strategy for the Iterated Prisoner's Dilemma that mostly mirrors
+    the opponent's last move, punishes streaks of defection, and occasionally
+    attempts to reset the relationship.
+    
+    Starts cooperative and copies the opponent’s previous move. If the opponent defects 
+    repeatedly, retaliates for the same number of rounds. When far ahead in score and 
+    conditions look statistically unfavorable, performs a “fresh start” by cooperating 
+    twice and clearing memory. Defects on the last two rounds to avoid endgame exploitation.
+    """
     def __init__(self):
         super().__init__()
         self.retaliation_count = 0

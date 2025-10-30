@@ -1,6 +1,8 @@
 from strategies.base_strategy import Strategy
 
 class Malthrin(Strategy):
+    """Starts with cooperation, then defects if the opponent has defected in the first 7 rounds,
+    mimics opponent's last move until round 98, then defects in the endgame."""
     def __init__(self):
         self.my_history = []
         self.opponent_history = []

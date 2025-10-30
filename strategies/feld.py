@@ -2,6 +2,7 @@ from strategies.base_strategy import Strategy
 import random
 
 class Feld(Strategy):
+    """Starts with cooperation, then defects with a certain probability, which decreases over time."""
     def __init__(self):
         self.my_history = []
         self.opponent_history = []

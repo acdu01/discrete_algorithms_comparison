@@ -2,6 +2,12 @@ import random
 from strategies.base_strategy import Strategy
 
 class HarringtonStrategy(Strategy):
+    """
+    maintains an internal "belief" about whether the opponent is
+    patient and willing to cooperate long-term. At the beginning of the match,
+    it explores cooperation probabilistically based on this belief. The belief
+    increases when the opponent cooperates and decreases when they defect.
+    """
     def __init__(self, initial_belief=0.5, belief_step=0.1, min_belief_to_cooperate=0.3):
         super().__init__()
         self.belief = initial_belief  # how sure we are that the opponent is patient (likely to cooperate long-term)

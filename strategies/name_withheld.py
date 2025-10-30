@@ -2,6 +2,8 @@ from strategies.base_strategy import Strategy
 import random
 
 class NameWithheld(Strategy):
+    """Adapts cooperation probability based on opponent's defection rate,
+    and defects against detected random opponents."""
     def __init__(self):
         self.my_history = []
         self.opponent_history = []   

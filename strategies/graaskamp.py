@@ -1,14 +1,11 @@
 from strategies.base_strategy import Strategy
 
 class GraaskampStrategy(Strategy):
-    """Initially cooperates in the first round.
-    Copies what its opponent did in the previous round until round 50. 
-    Defects in the 51st round to probe strategy weaknesses. 
-    Plays tit for tat for another 5 moves. 
-    Deflection on 51st round checks for itself/tit for tat strategies
-    If the score is not good, it will assume that it is playing against random
-    Otherwise, continue tit for tat but deflect every 5-15 moves
-
+    """
+    initially cooperates, then mimics opponent's last move for 50 rounds,
+    defects once, mimics opponent's last move for 4 rounds,
+    then analyzes opponent's behavior to decide whether to cooperate or defect
+    based on their cooperation rate.
     """
     def move(self):
         if not self.my_history:

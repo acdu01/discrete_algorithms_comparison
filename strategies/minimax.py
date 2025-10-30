@@ -9,6 +9,7 @@ POINTS = {
 
 
 class MiniMax(Strategy):
+    """Uses the minimax algorithm with alpha-beta pruning to decide between cooperation and defection"""
 
     def __init__(self, rounds=5):
         super().__init__()

@@ -1,6 +1,7 @@
 from strategies.base_strategy import Strategy
 
 class TitForTat(Strategy):
+    """starts with cooperate, then mimics opponent's last move"""
     def move(self):
         if not self.opponent_history:
             return 'C'  # start with cooperation
