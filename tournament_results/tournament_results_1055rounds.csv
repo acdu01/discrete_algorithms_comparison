@@ -1,138 +1,173 @@
 Player 1,Player 2,Score 1,Score 2
+TidemanAndChieruzzi,AlwaysCoop,3169,3159
+TidemanAndChieruzzi,AlwaysDefect,1054,1059
 TidemanAndChieruzzi,Davis,3165,3160
 TidemanAndChieruzzi,DefectTitForTat,1058,1058
-TidemanAndChieruzzi,Feld,1074,1074
+TidemanAndChieruzzi,Feld,1128,1128
 TidemanAndChieruzzi,Friedman,3165,3160
 TidemanAndChieruzzi,GraaskampStrategy,3166,3146
 TidemanAndChieruzzi,GrofmanStrategy,3165,3160
 TidemanAndChieruzzi,Grudger,3165,3160
-TidemanAndChieruzzi,HarringtonStrategy,3165,3160
-TidemanAndChieruzzi,JossStrategy,1064,1064
+TidemanAndChieruzzi,HarringtonStrategy,1061,1061
+TidemanAndChieruzzi,JossStrategy,1074,1074
 TidemanAndChieruzzi,Malthrin,3165,3160
 TidemanAndChieruzzi,MaxMax,1054,1059
 TidemanAndChieruzzi,MiniMax,1054,1059
-TidemanAndChieruzzi,NameWithheld,1058,1058
-TidemanAndChieruzzi,RandomStrategy,2928,1028
+TidemanAndChieruzzi,NameWithheld,1063,1063
+TidemanAndChieruzzi,RandomStrategy,2984,1019
 TidemanAndChieruzzi,TitForTat,3165,3160
+AlwaysCoop,AlwaysDefect,0,5275
+AlwaysCoop,Davis,3165,3165
+AlwaysCoop,DefectTitForTat,3162,3167
+AlwaysCoop,Feld,1689,4149
+AlwaysCoop,Friedman,3165,3165
+AlwaysCoop,GraaskampStrategy,3162,3167
+AlwaysCoop,GrofmanStrategy,3165,3165
+AlwaysCoop,Grudger,3165,3165
+AlwaysCoop,HarringtonStrategy,3159,3169
+AlwaysCoop,JossStrategy,2856,3371
+AlwaysCoop,Malthrin,3165,3165
+AlwaysCoop,MaxMax,0,5275
+AlwaysCoop,MiniMax,0,5275
+AlwaysCoop,NameWithheld,21,5261
+AlwaysCoop,RandomStrategy,1545,4245
+AlwaysCoop,TitForTat,3165,3165
+AlwaysDefect,Davis,1099,1044
+AlwaysDefect,DefectTitForTat,1055,1055
+AlwaysDefect,Feld,1059,1054
+AlwaysDefect,Friedman,1059,1054
+AlwaysDefect,GraaskampStrategy,1059,1054
+AlwaysDefect,GrofmanStrategy,3507,442
+AlwaysDefect,Grudger,1059,1054
+AlwaysDefect,HarringtonStrategy,1059,1054
+AlwaysDefect,JossStrategy,1059,1054
+AlwaysDefect,Malthrin,1059,1054
+AlwaysDefect,MaxMax,1055,1055
+AlwaysDefect,MiniMax,1055,1055
+AlwaysDefect,NameWithheld,1063,1053
+AlwaysDefect,RandomStrategy,3151,531
+AlwaysDefect,TitForTat,1059,1054
 Davis,DefectTitForTat,1078,1078
-Davis,Feld,1078,1078
+Davis,Feld,1106,1106
 Davis,Friedman,3165,3165
 Davis,GraaskampStrategy,1196,1151
 Davis,GrofmanStrategy,3165,3165
 Davis,Grudger,3165,3165
-Davis,HarringtonStrategy,3165,3165
-Davis,JossStrategy,1078,1078
+Davis,HarringtonStrategy,1066,1086
+Davis,JossStrategy,1075,1080
 Davis,Malthrin,3165,3165
 Davis,MaxMax,1044,1099
 Davis,MiniMax,1044,1099
-Davis,NameWithheld,1074,1089
-Davis,RandomStrategy,3067,587
+Davis,NameWithheld,1066,1091
+Davis,RandomStrategy,3125,570
 Davis,TitForTat,3165,3165
-DefectTitForTat,Feld,1169,1169
+DefectTitForTat,Feld,1118,1118
 DefectTitForTat,Friedman,1058,1058
 DefectTitForTat,GraaskampStrategy,1139,1139
-DefectTitForTat,GrofmanStrategy,3166,3161
+DefectTitForTat,GrofmanStrategy,3155,3150
 DefectTitForTat,Grudger,1058,1058
-DefectTitForTat,HarringtonStrategy,1058,1058
+DefectTitForTat,HarringtonStrategy,3167,3162
 DefectTitForTat,JossStrategy,1106,1106
 DefectTitForTat,Malthrin,1058,1058
 DefectTitForTat,MaxMax,1055,1055
 DefectTitForTat,MiniMax,1055,1055
-DefectTitForTat,NameWithheld,1058,1058
-DefectTitForTat,RandomStrategy,2356,2356
+DefectTitForTat,NameWithheld,1069,1069
+DefectTitForTat,RandomStrategy,2313,2313
 DefectTitForTat,TitForTat,2640,2635
-Feld,Friedman,1108,1108
-Feld,GraaskampStrategy,1108,1103
-Feld,GrofmanStrategy,3029,1619
-Feld,Grudger,1096,1096
-Feld,HarringtonStrategy,1104,1104
-Feld,JossStrategy,1098,1103
-Feld,Malthrin,1072,1072
+Feld,Friedman,1100,1100
+Feld,GraaskampStrategy,1146,1146
+Feld,GrofmanStrategy,2965,1640
+Feld,Grudger,1098,1098
+Feld,HarringtonStrategy,1092,1092
+Feld,JossStrategy,1128,1128
+Feld,Malthrin,1106,1106
 Feld,MaxMax,1054,1059
 Feld,MiniMax,1054,1059
-Feld,NameWithheld,1062,1067
-Feld,RandomStrategy,2769,1484
-Feld,TitForTat,1132,1127
+Feld,NameWithheld,1063,1068
+Feld,RandomStrategy,2688,1483
+Feld,TitForTat,1140,1135
 Friedman,GraaskampStrategy,1196,1151
 Friedman,GrofmanStrategy,3165,3165
 Friedman,Grudger,3165,3165
 Friedman,HarringtonStrategy,3165,3165
-Friedman,JossStrategy,1062,1062
+Friedman,JossStrategy,1134,1134
 Friedman,Malthrin,3165,3165
 Friedman,MaxMax,1054,1059
 Friedman,MiniMax,1054,1059
-Friedman,NameWithheld,1064,1059
-Friedman,RandomStrategy,3286,501
+Friedman,NameWithheld,1058,1058
+Friedman,RandomStrategy,3174,529
 Friedman,TitForTat,3165,3165
-GraaskampStrategy,GrofmanStrategy,3161,3161
+GraaskampStrategy,GrofmanStrategy,3166,3161
 GraaskampStrategy,Grudger,1151,1196
-GraaskampStrategy,HarringtonStrategy,1151,1196
-GraaskampStrategy,JossStrategy,1092,1097
+GraaskampStrategy,HarringtonStrategy,1150,1185
+GraaskampStrategy,JossStrategy,1070,1075
 GraaskampStrategy,Malthrin,1151,1196
 GraaskampStrategy,MaxMax,1054,1059
 GraaskampStrategy,MiniMax,1054,1059
-GraaskampStrategy,NameWithheld,1057,1062
-GraaskampStrategy,RandomStrategy,3133,638
+GraaskampStrategy,NameWithheld,1064,1069
+GraaskampStrategy,RandomStrategy,3113,618
 GraaskampStrategy,TitForTat,3162,3162
 GrofmanStrategy,Grudger,3165,3165
-GrofmanStrategy,HarringtonStrategy,3165,3165
-GrofmanStrategy,JossStrategy,2469,2919
+GrofmanStrategy,HarringtonStrategy,3160,3165
+GrofmanStrategy,JossStrategy,2512,2967
 GrofmanStrategy,Malthrin,3165,3165
-GrofmanStrategy,MaxMax,443,3503
-GrofmanStrategy,MiniMax,422,3587
-GrofmanStrategy,NameWithheld,441,3546
-GrofmanStrategy,RandomStrategy,2080,2980
+GrofmanStrategy,MaxMax,437,3527
+GrofmanStrategy,MiniMax,435,3535
+GrofmanStrategy,NameWithheld,459,3509
+GrofmanStrategy,RandomStrategy,2172,2967
 GrofmanStrategy,TitForTat,3165,3165
-Grudger,HarringtonStrategy,1066,1056
-Grudger,JossStrategy,1062,1062
+Grudger,HarringtonStrategy,1054,1059
+Grudger,JossStrategy,1138,1138
 Grudger,Malthrin,3165,3165
 Grudger,MaxMax,1054,1059
 Grudger,MiniMax,1054,1059
-Grudger,NameWithheld,1070,1055
-Grudger,RandomStrategy,3132,542
+Grudger,NameWithheld,1074,1054
+Grudger,RandomStrategy,3224,519
 Grudger,TitForTat,3165,3165
-HarringtonStrategy,JossStrategy,1103,1103
-HarringtonStrategy,Malthrin,1057,1062
+HarringtonStrategy,JossStrategy,1059,1054
+HarringtonStrategy,Malthrin,3165,3165
 HarringtonStrategy,MaxMax,1054,1059
-HarringtonStrategy,MiniMax,1053,1063
-HarringtonStrategy,NameWithheld,1068,1058
-HarringtonStrategy,RandomStrategy,3252,512
-HarringtonStrategy,TitForTat,1059,1054
-JossStrategy,Malthrin,1086,1086
+HarringtonStrategy,MiniMax,1055,1055
+HarringtonStrategy,NameWithheld,1066,1061
+HarringtonStrategy,RandomStrategy,3116,556
+HarringtonStrategy,TitForTat,3164,3164
+JossStrategy,Malthrin,1162,1162
 JossStrategy,MaxMax,1054,1059
 JossStrategy,MiniMax,1054,1059
-JossStrategy,NameWithheld,1072,1072
-JossStrategy,RandomStrategy,2402,2177
-JossStrategy,TitForTat,1097,1092
+JossStrategy,NameWithheld,1066,1071
+JossStrategy,RandomStrategy,2401,2186
+JossStrategy,TitForTat,1106,1101
 Malthrin,MaxMax,1054,1059
 Malthrin,MiniMax,1054,1059
 Malthrin,NameWithheld,1066,1056
-Malthrin,RandomStrategy,3138,538
+Malthrin,RandomStrategy,3128,543
 Malthrin,TitForTat,3165,3165
 MaxMax,MiniMax,1055,1055
-MaxMax,NameWithheld,1063,1053
-MaxMax,RandomStrategy,3079,549
+MaxMax,NameWithheld,1071,1051
+MaxMax,RandomStrategy,3123,538
 MaxMax,TitForTat,1059,1054
-MiniMax,NameWithheld,1063,1053
-MiniMax,RandomStrategy,3195,520
+MiniMax,NameWithheld,1055,1055
+MiniMax,RandomStrategy,3191,521
 MiniMax,TitForTat,1059,1054
-NameWithheld,RandomStrategy,3179,529
-NameWithheld,TitForTat,1065,1060
-RandomStrategy,TitForTat,2382,2382
+NameWithheld,RandomStrategy,3141,541
+NameWithheld,TitForTat,1062,1057
+RandomStrategy,TitForTat,2437,2432
 ,,,
-final score,GrofmanStrategy,35946,
-final score,TidemanAndChieruzzi,34611,
-final score,TitForTat,33605,
-final score,Friedman,33032,
-final score,Davis,32809,
-final score,Grudger,30773,
-final score,Malthrin,30771,
-final score,HarringtonStrategy,26715,
-final score,GraaskampStrategy,24856,
-final score,DefectTitForTat,21112,
-final score,MiniMax,20589,
-final score,NameWithheld,20530,
-final score,MaxMax,20385,
-final score,Feld,20007,
-final score,JossStrategy,19359,
-final score,RandomStrategy,17323,
+final score,TitForTat,39998,
+final score,GrofmanStrategy,39718,
+final score,AlwaysCoop,37743,
+final score,Friedman,37197,
+final score,Malthrin,37193,
+final score,TidemanAndChieruzzi,36855,
+final score,Grudger,35154,
+final score,Davis,34994,
+final score,HarringtonStrategy,32877,
+final score,GraaskampStrategy,29089,
+final score,DefectTitForTat,27349,
+final score,MiniMax,26847,
+final score,NameWithheld,26792,
+final score,AlwaysDefect,26791,
+final score,MaxMax,26791,
+final score,Feld,25189,
+final score,JossStrategy,24024,
+final score,RandomStrategy,22116,
