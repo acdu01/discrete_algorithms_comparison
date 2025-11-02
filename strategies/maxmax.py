@@ -8,7 +8,7 @@ POINTS = {
 }
 
 
-class MiniMax(Strategy):
+class MaxMax(Strategy):
     def __init__(self, rounds=5):
         super().__init__()
         self.rounds = rounds  # how many future rounds to look ahead
@@ -48,17 +48,10 @@ class MiniMax(Strategy):
             return max_points
 
         else:
-            # opponent turn, assume they try to minimize its score
-            min_points = float('inf')
+            # assume opponent maximizes their own score, not minimizes its
+            max_points = float('-inf')
             for my_next_move in ["C", "D"]:
-                # get score for this round based on both of its moves
                 score = POINTS[(my_next_move, my_move)][0]
-                # simulate next round
                 eval = score + self.minimax(my_next_move, True, rounds_left - 1, alpha, beta)
-                # keep the lowest possible total since opponent minimizes
-                min_points = min(min_points, eval)
-                # update beta for pruning
-                beta = min(beta, eval)
-                if beta <= alpha:
-                    break  # prune if outcome can't get worse 
-            return min_points
+                max_points = max(max_points, eval)
+            return max_points
