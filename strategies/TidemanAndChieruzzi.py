@@ -10,7 +10,7 @@ POINTS = {
 
 class TidemanAndChieruzzi(Strategy):
     """
-    A reactive strategy for the Iterated Prisoner's Dilemma that mostly mirrors
+    A reactive strategy that mostly mirrors
     the opponent's last move, punishes streaks of defection, and occasionally
     attempts to reset the relationship.
     
